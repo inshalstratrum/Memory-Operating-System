@@ -1,0 +1,17 @@
+{
+  "task_example_0": {
+    "id": "task_example_0",
+    "project_id": "command_center",
+    "title": "Review system architecture",
+    "description": "Initial system readiness inspection",
+    "deadline": null,
+    "created_at": "2026-01-01T00:00:00.000000",
+    "updated_at": "2026-01-01T00:00:00.000000",
+    "complete": false,
+    "priority": 5,
+    "assigned_to": null,
+    "tags": [
+      "setup"
+    ]
+  }
+}

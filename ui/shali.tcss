@@ -1,0 +1,60 @@
+"""Shali UI Styles"""
+Screen {
+    background: $surface;
+}
+
+#sidebar {
+    width: 1fr;
+    min-width: 20;
+    max-width: 35;
+    background: $primary;
+    dock: left;
+}
+
+#chat-area {
+    width: 2fr;
+    min-width: 40;
+}
+
+#context-area {
+    width: 1fr;
+    min-width: 30;
+    max-width: 40;
+    background: $panel;
+    border-left: solid $success;
+}
+
+#canvas-area, #control-area {
+    width: 2fr;
+}
+
+.hidden {
+    display: none;
+}
+
+.chat-message {
+    margin: 1 0;
+    padding: 1 2;
+}
+
+.chat-user {
+    background: $boost;
+    border-radius: 4;
+}
+
+.chat-ai {
+    background: $primary;
+    border-radius: 4;
+}
+
+.status-active {
+    color: $success;
+}
+
+.status-warning {
+    color: $warning;
+}
+
+.status-critical {
+    color: $error;
+}

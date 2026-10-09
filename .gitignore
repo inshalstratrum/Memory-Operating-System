@@ -1,0 +1,44 @@
+# Memory Operating System .gitignore
+
+# Python Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+Include/
+Lib/
+Scripts/
+share/
+pyvenv.cfg
+
+# Local Vector Databases & Runtime Logs
+data/chroma_db/
+data/logs/
+data/workspace/
+langflow_data/
+*.sqlite3
+*.db
+
+# Local Instance Configurations (use *.example.json for templates)
+data/projects.json
+data/tasks.json
+data/workspaces.json
+
+# Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.cpython-*.pyc
+
+# Environment & Secrets
+.env
+.env.*
+*.secret
+*Secret*.txt
+
+# IDE & OS Artifacts
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store

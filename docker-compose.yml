@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  langflow:
+    image: langflowai/langflow:latest
+    container_name: langflow
+    user: root
+    ports:
+      - "7860:7860"
+    environment:
+      SUPABASE_URL: http://kong:8000
+      SUPABASE_SERVICE_ROLE_KEY: ${SUPABASE_SERVICE_ROLE_KEY:-}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY:-}
+      LIFEOS_DLP_MODE: "true"
+      LANGFLOW_COMPONENTS_PATH: /app/data/lifeos_components
+    volumes:
+      - ./langflow_data:/app/data
+      - ./pgvector_pipeline/langflow_components:/app/data/lifeos_components:ro
+    networks:
+      - default
+      - supabase_default
+
+networks:
+  supabase_default:
+    external: true

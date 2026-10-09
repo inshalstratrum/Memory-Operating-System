@@ -1,0 +1,34 @@
+MemoryOS/
+│
+├── main.py                    # The central entry point (Bootloader)
+├── config.py                  # Global settings (API keys, Voice params, DB paths)
+│
+├── core/
+│   ├── __init__.py
+│   ├── orchestrator.py        # The Brain Router (decides agent vs tool vs memory)
+│   ├── memory.py              # ChromaDB + Embeddings + RAG logic
+│   ├── agents.py              # Multi-agent system (Prompts & OpenRouter calls)
+│
+├── tools/
+│   ├── __init__.py
+│   ├── automation.py          # PC control, file ops, directory management
+│   ├── system_tools.py        # Safe OS-level utilities
+│
+├── ui/
+│   ├── __init__.py
+│   ├── desktop_app.py         # PyQt GUI (Replaces Streamlit)
+│   ├── themes.py              # Styles and visual assets
+│
+├── voice/
+│   ├── __init__.py
+│   ├── speech.py              # pyttsx3 and speech_recognition wrappers
+│   ├── wake_word.py           # Future expansion for "Hey OS"
+│
+├── data/                      # Local Storage
+│   ├── chroma_db/             # Persistent Vector DB (Do not sync to Git)
+│   ├── logs/                  # System execution logs
+│   ├── workspace/             # Safe sandbox for automation file creation
+│
+└── services/
+    ├── __init__.py
+    ├── llm_client.py          # Isolated OpenRouter API handler
